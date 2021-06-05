@@ -1,7 +1,7 @@
 package com.assignment.thepirates.service;
 
-import com.assignment.thepirates.domain.Store;
-import com.assignment.thepirates.domain.StoreRepository;
+import com.assignment.thepirates.model.Store;
+import com.assignment.thepirates.repository.StoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

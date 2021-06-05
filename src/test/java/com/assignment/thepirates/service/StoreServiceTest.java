@@ -1,16 +1,11 @@
 package com.assignment.thepirates.service;
 
-import com.assignment.thepirates.domain.Store;
-import com.assignment.thepirates.domain.StoreRepository;
-import org.aspectj.lang.annotation.Before;
+import com.assignment.thepirates.model.Store;
+import com.assignment.thepirates.repository.StoreRepository;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.mock.web.MockMultipartHttpServletRequest;
-
-import java.io.IOException;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.*;
@@ -32,7 +27,13 @@ class StoreServiceTest {
 
     @Test
     public void addRestaurant() {
-        Store store = new Store("mermaid", "incheon", "incheon", 2, "incheon", "010");
+        Store store = Store.builder()
+                .name("mermaid")
+                .owner("zhang")
+                .address("incheon")
+                .phone("010-4915-9399")
+                .level(1)
+                .description("detail").build();
         given(storeRepository.save(any())).willReturn(store);
         Store added = storeService.addStore(store);
         assertEquals("mermaid", added.getName());

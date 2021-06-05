@@ -1,10 +1,8 @@
 package com.assignment.thepirates.controller;
 
-import com.assignment.thepirates.domain.Store;
+import com.assignment.thepirates.model.Store;
 import com.assignment.thepirates.service.StoreService;
-import org.hamcrest.core.StringContains;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -31,8 +29,12 @@ class StoreControllerTest {
     @Test
     public void storeListTest() throws Exception {
         List<Store> storeList = new ArrayList<>();
-        storeList.add(new Store("mermaid", "zhang", "incheon",
-                2, "incheon", "010-1234"));
+        storeList.add(Store.builder()
+            .name("mermaid")
+            .owner("zhang")
+            .description("detail")
+            .phone("010-4915-3999")
+            .address("incheon").build());
         given(storeService.getStores()).willReturn(storeList);
         mock.perform(get("/stores"))
                 .andExpect(status().isOk())

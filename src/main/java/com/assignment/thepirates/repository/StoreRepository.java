@@ -1,5 +1,6 @@
-package com.assignment.thepirates.domain;
+package com.assignment.thepirates.repository;
 
+import com.assignment.thepirates.model.Store;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
