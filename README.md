@@ -26,6 +26,7 @@ ___
  URL | 설명 | 사용방법
 --- | --- | ---
 /stores | POST | 새로운 점포를 등록할 수 있다.
+/stores/holiday | POST | 점포 휴일을 등록할 수 있다.
 /stores | GET | 모든 점포리스트를 볼 수 있다.
 /stores/{id} | GET | 해당 {id} 점포 상세조회가 가능하다.
 
