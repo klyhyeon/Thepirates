@@ -46,6 +46,7 @@ public class StoreController {
         return ResponseEntity.status(200).body("{}");
     }
     //git stash
+    //meaningless commit
     //git test
     //git --soft
     //git rebase
