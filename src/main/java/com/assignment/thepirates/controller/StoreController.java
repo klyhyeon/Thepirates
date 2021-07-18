@@ -45,6 +45,7 @@ public class StoreController {
         //URI location = new URI("/stores");
         return ResponseEntity.status(200).body("{}");
     }
+    //git stash
     //git test
     //git --soft
     //git rebase
