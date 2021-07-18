@@ -30,6 +30,7 @@ public class StoreController {
     public ResponseEntity<?> add(@RequestBody Store source) {
         String name = source.getName();
         String owner = source.getOwner();
+        String gitTest = "";
         String description = source.getDescription();
         int level = source.getLevel();
         String address = source.getAddress();
