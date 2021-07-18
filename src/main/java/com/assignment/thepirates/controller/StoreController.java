@@ -30,7 +30,6 @@ public class StoreController {
     public ResponseEntity<?> add(@RequestBody Store source) {
         String name = source.getName();
         String owner = source.getOwner();
-        String gitTest = "";
         String description = source.getDescription();
         int level = source.getLevel();
         String address = source.getAddress();
@@ -46,4 +45,6 @@ public class StoreController {
         //URI location = new URI("/stores");
         return ResponseEntity.status(200).body("{}");
     }
+    //git test
+    //git --soft
 }
